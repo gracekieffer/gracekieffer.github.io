@@ -1,0 +1,24 @@
+:root{--paper:#eef3f4;--ink:#0b2a3a;--muted:#4b6571;--line:#bccfd5;--coral:#d4503f;--deep:#0f4c5c;
+--head:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;--body:"Source Serif 4",Georgia,"Times New Roman",serif}
+@media (prefers-color-scheme:dark){:root{--paper:#07202c;--ink:#e3eef0;--muted:#93aeb7;--line:#1f4352;--coral:#ff7b66;--deep:#7cc4cf}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:1.125rem/1.65 var(--body);min-height:100vh;display:flex;flex-direction:column}
+a{color:var(--deep);text-underline-offset:3px}a:hover{color:var(--coral)}
+:focus-visible{outline:3px solid var(--coral);outline-offset:3px}
+.wrap{width:100%;max-width:60rem;margin:0 auto;padding:0 1.5rem}
+header{border-bottom:1px solid var(--line)}
+header .wrap{display:flex;flex-wrap:wrap;gap:.75rem 2rem;align-items:center;justify-content:space-between;padding-top:1.25rem;padding-bottom:1.25rem}
+.logo{font:700 1.25rem var(--head);letter-spacing:-.01em;color:var(--ink);text-decoration:none}
+nav{display:flex;gap:1.5rem;flex-wrap:wrap;font:500 1rem var(--head)}
+nav a{color:var(--ink);text-decoration:none;padding-bottom:.2rem;border-bottom:2px solid transparent}
+nav a:hover{border-color:var(--line)}
+nav a[aria-current="page"]{border-color:var(--coral)}
+main{flex:1;padding:4rem 0}
+h1{font:700 clamp(2.5rem,8vw,5.5rem)/1 var(--head);letter-spacing:-.03em;margin:0 0 1.25rem}
+h2{font:700 1.4rem/1.2 var(--head);margin:2.5rem 0 .5rem}
+p{max-width:40rem;margin:.5rem 0}
+.ph{color:var(--muted);font-style:italic}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:1.25rem;margin-top:1.5rem}
+.card{border:1px dashed var(--line);border-radius:.4rem;padding:1.25rem;min-height:11rem}
+.card h3{font:700 1.1rem var(--head);margin:0 0 .4rem}
+footer{border-top:1px solid var(--line);padding:1.5rem 0;color:var(--muted);font-size:.9rem}
